@@ -1,0 +1,3167 @@
+{
+	"info": {
+		"_postman_id": "b9d658e4-843f-49f1-ab83-b4e4ced159f3",
+		"name": "hmisApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23136166"
+	},
+	"item": [
+		{
+			"name": "Hmis Login Api",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\":\"Midas\",\r\n\t\"password\":\"mid@s!23#\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/login/processLogin",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"login",
+						"processLogin"
+					]
+				},
+				"description": "Login Process:\n\nRequest Method : JSON POST\n\nResponse :JSON"
+			},
+			"response": [
+				{
+					"name": "Hmis Login Api",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "midas",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mid@s!23#",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/login/processLogin",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"login",
+								"processLogin"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1657707406.800783"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1657707406.800783"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Jul 2022 10:16:46 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"error\": null,\n    \"messages\": {\n        \"success\": \"Successfully Logged In\"\n    },\n    \"data\": {\n        \"usma_username\": \"midas\",\n        \"usma_fullname\": \"midas\",\n        \"usma_email\": \"midasadmin@gmail.com\",\n        \"usma_doctorid\": \"1472\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Generate JWT TOKEN FOR USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "biwash@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/getJWTForUser",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"getJWTForUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Generate JWT TOKEN FOR USER",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "biwash@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/getJWTForUser",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"getJWTForUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1657771099.548731"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1657771099.548731"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Jul 2022 03:58:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User authenticated successfully\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Biwash Khatiwada\",\n        \"email\": \"biwash@gmail.com\"\n    },\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTc3NzEwOTksImV4cCI6MTY1Nzc3NDY5OX0.USUNIdfsvgzw-6moBk-0oxIHH9v9QC9FbKchqkhCQdM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Country Name Master Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFycHN0aEBnbWFpbC5jb20iLCJpYXQiOjE2NTY0MDU5MTUsImV4cCI6MTY1NjQwOTUxNX0.IP-Zc3mQJkFirCo_uVbTDLSw0LLmSonDB79eFVkm__g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/register/getCountry",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"register",
+						"getCountry"
+					]
+				},
+				"description": "Request Type Get"
+			},
+			"response": [
+				{
+					"name": "Get Country Name Master Data Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.100.113/hmisApi/register/getCountry",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"113"
+							],
+							"path": [
+								"hmisApi",
+								"register",
+								"getCountry"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 Jun 2022 06:58:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.26"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1655449088.795301"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.113/hmisApi/?debugbar_time=1655449088.795301"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"error\": null,\n    \"messages\": {\n        \"success\": \"Data Loaded\"\n    },\n    \"data\": [\n        {\n            \"countryid\": \"8\",\n            \"countrycode\": \"AF   \",\n            \"countryname\": \"Afghanistan\",\n            \"capital\": \"Kabul\",\n            \"zipcode\": \"93\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"9\",\n            \"countrycode\": \"AL   \",\n            \"countryname\": \"Albania\",\n            \"capital\": \"Tirana\",\n            \"zipcode\": \"355\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"10\",\n            \"countrycode\": \"DZ   \",\n            \"countryname\": \"Algeria\",\n            \"capital\": \"Algiers\",\n            \"zipcode\": \"213\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"11\",\n            \"countrycode\": \"AS   \",\n            \"countryname\": \"American Samoa\",\n            \"capital\": \"Pago Pago\",\n            \"zipcode\": \"684\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"12\",\n            \"countrycode\": \"AD   \",\n            \"countryname\": \"Andorra\",\n            \"capital\": \"Andorra\",\n            \"zipcode\": \"376\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"13\",\n            \"countrycode\": \"AO   \",\n            \"countryname\": \"Angola\",\n            \"capital\": \"Luanda\",\n            \"zipcode\": \"244\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"14\",\n            \"countrycode\": \"AI   \",\n            \"countryname\": \"Anguilla\",\n            \"capital\": \"The Valley\",\n            \"zipcode\": \"1-264\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"15\",\n            \"countrycode\": \"AQ   \",\n            \"countryname\": \"Antarctica\",\n            \"capital\": \"None\",\n            \"zipcode\": \"672\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"16\",\n            \"countrycode\": \"AG   \",\n            \"countryname\": \"Antigua and Barbuda\",\n            \"capital\": \"St. Johns\",\n            \"zipcode\": \"1-268\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"17\",\n            \"countrycode\": \"AR   \",\n            \"countryname\": \"Argentina\",\n            \"capital\": \"Buenos Aires\",\n            \"zipcode\": \"54\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"18\",\n            \"countrycode\": \"AM   \",\n            \"countryname\": \"Armenia\",\n            \"capital\": \"Yerevan\",\n            \"zipcode\": \"374\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"19\",\n            \"countrycode\": \"AW   \",\n            \"countryname\": \"Aruba\",\n            \"capital\": \"Oranjestad\",\n            \"zipcode\": \"297\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"20\",\n            \"countrycode\": \"AU   \",\n            \"countryname\": \"Australia\",\n            \"capital\": \"Canberra\",\n            \"zipcode\": \"61\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"21\",\n            \"countrycode\": \"AT   \",\n            \"countryname\": \"Austria\",\n            \"capital\": \"Vienna\",\n            \"zipcode\": \"43\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"22\",\n            \"countrycode\": \"AZ   \",\n            \"countryname\": \"Azerbaijan\",\n            \"capital\": \"Baku\",\n            \"zipcode\": \"994\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"23\",\n            \"countrycode\": \"BS   \",\n            \"countryname\": \"Bahamas\",\n            \"capital\": \"Nassau\",\n            \"zipcode\": \"1-242\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"24\",\n            \"countrycode\": \"BH   \",\n            \"countryname\": \"Bahrain\",\n            \"capital\": \"Al-Manamah\",\n            \"zipcode\": \"973\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"4\",\n            \"countrycode\": \"BD   \",\n            \"countryname\": \"Bangladesh\",\n            \"capital\": \"Dhaka\",\n            \"zipcode\": \"880\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"25\",\n            \"countrycode\": \"BB   \",\n            \"countryname\": \"Barbados\",\n            \"capital\": \"Bridgetown\",\n            \"zipcode\": \"1-246\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"26\",\n            \"countrycode\": \"BY   \",\n            \"countryname\": \"Belarus\",\n            \"capital\": \"Minsk\",\n            \"zipcode\": \"375\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"27\",\n            \"countrycode\": \"BE   \",\n            \"countryname\": \"Belgium\",\n            \"capital\": \"Brussels\",\n            \"zipcode\": \"32\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"28\",\n            \"countrycode\": \"BZ   \",\n            \"countryname\": \"Belize\",\n            \"capital\": \"Belmopan\",\n            \"zipcode\": \"501\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"29\",\n            \"countrycode\": \"BJ   \",\n            \"countryname\": \"Benin\",\n            \"capital\": \"Porto-Novo\",\n            \"zipcode\": \"229\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"30\",\n            \"countrycode\": \"BM   \",\n            \"countryname\": \"Bermuda\",\n            \"capital\": \"Hamilton\",\n            \"zipcode\": \"1-441\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"3\",\n            \"countrycode\": \"BT   \",\n            \"countryname\": \"Bhutan\",\n            \"capital\": \"Thimphu\",\n            \"zipcode\": \"975\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"31\",\n            \"countrycode\": \"BO   \",\n            \"countryname\": \"Bolivia\",\n            \"capital\": \"La Paz\",\n            \"zipcode\": \"591\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"32\",\n            \"countrycode\": \"BA   \",\n            \"countryname\": \"Bosnia-Herzegovina\",\n            \"capital\": \"Sarajevo\",\n            \"zipcode\": \"387\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"33\",\n            \"countrycode\": \"BW   \",\n            \"countryname\": \"Botswana\",\n            \"capital\": \"Gaborone\",\n            \"zipcode\": \"267\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"34\",\n            \"countrycode\": \"BV   \",\n            \"countryname\": \"Bouvet Island\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"35\",\n            \"countrycode\": \"BR   \",\n            \"countryname\": \"Brazil\",\n            \"capital\": \"Brasilia\",\n            \"zipcode\": \"55\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"36\",\n            \"countrycode\": \"IO   \",\n            \"countryname\": \"British Indian Ocean Territory\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"37\",\n            \"countrycode\": \"BN   \",\n            \"countryname\": \"Brunei Darussalam\",\n            \"capital\": \"Bandar Seri Begawan\",\n            \"zipcode\": \"673\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"38\",\n            \"countrycode\": \"BG   \",\n            \"countryname\": \"Bulgaria\",\n            \"capital\": \"Sofia\",\n            \"zipcode\": \"359\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"39\",\n            \"countrycode\": \"BF   \",\n            \"countryname\": \"Burkina Faso\",\n            \"capital\": \"Ouagadougou\",\n            \"zipcode\": \"226\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"40\",\n            \"countrycode\": \"BI   \",\n            \"countryname\": \"Burundi\",\n            \"capital\": \"Bujumbura\",\n            \"zipcode\": \"257\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"41\",\n            \"countrycode\": \"KH   \",\n            \"countryname\": \"Cambodia\",\n            \"capital\": \"Phnom Penh\",\n            \"zipcode\": \"855\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"42\",\n            \"countrycode\": \"CM   \",\n            \"countryname\": \"Cameroon\",\n            \"capital\": \"Yaounde\",\n            \"zipcode\": \"237\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"43\",\n            \"countrycode\": \"CA   \",\n            \"countryname\": \"Canada\",\n            \"capital\": \"Ottawa\",\n            \"zipcode\": \"1\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"44\",\n            \"countrycode\": \"CV   \",\n            \"countryname\": \"Cape Verde\",\n            \"capital\": \"Praia\",\n            \"zipcode\": \"238\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"45\",\n            \"countrycode\": \"KY   \",\n            \"countryname\": \"Cayman Islands\",\n            \"capital\": \"Georgetown\",\n            \"zipcode\": \"1-345\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"46\",\n            \"countrycode\": \"CF   \",\n            \"countryname\": \"Central African Republic\",\n            \"capital\": \"Bangui\",\n            \"zipcode\": \"236\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"47\",\n            \"countrycode\": \"TD   \",\n            \"countryname\": \"Chad\",\n            \"capital\": \"N'Djamena\",\n            \"zipcode\": \"235\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"48\",\n            \"countrycode\": \"CL   \",\n            \"countryname\": \"Chile\",\n            \"capital\": \"Santiago\",\n            \"zipcode\": \"56\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"49\",\n            \"countrycode\": \"CN   \",\n            \"countryname\": \"China\",\n            \"capital\": \"Beijing\",\n            \"zipcode\": \"86\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"50\",\n            \"countrycode\": \"CX   \",\n            \"countryname\": \"Christmas Island\",\n            \"capital\": \"The Settlement\",\n            \"zipcode\": \"61\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"51\",\n            \"countrycode\": \"CC   \",\n            \"countryname\": \"Cocos (Keeling) Islands\",\n            \"capital\": \"West Island\",\n            \"zipcode\": \"61\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"52\",\n            \"countrycode\": \"CO   \",\n            \"countryname\": \"Colombia\",\n            \"capital\": \"Bogota\",\n            \"zipcode\": \"57\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"53\",\n            \"countrycode\": \"KM   \",\n            \"countryname\": \"Comoros\",\n            \"capital\": \"Moroni\",\n            \"zipcode\": \"269\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"54\",\n            \"countrycode\": \"CG   \",\n            \"countryname\": \"Congo\",\n            \"capital\": \"Brazzaville\",\n            \"zipcode\": \"242\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"55\",\n            \"countrycode\": \"CD   \",\n            \"countryname\": \"Congo, Dem. Republic\",\n            \"capital\": \"Kinshasa\",\n            \"zipcode\": \"243\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"56\",\n            \"countrycode\": \"CK   \",\n            \"countryname\": \"Cook Islands\",\n            \"capital\": \"Avarua\",\n            \"zipcode\": \"682\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"57\",\n            \"countrycode\": \"CR   \",\n            \"countryname\": \"Costa Rica\",\n            \"capital\": \"San Jose\",\n            \"zipcode\": \"506\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"58\",\n            \"countrycode\": \"HR   \",\n            \"countryname\": \"Croatia\",\n            \"capital\": \"Zagreb\",\n            \"zipcode\": \"385\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"59\",\n            \"countrycode\": \"CU   \",\n            \"countryname\": \"Cuba\",\n            \"capital\": \"Havana\",\n            \"zipcode\": \"53\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"60\",\n            \"countrycode\": \"CY   \",\n            \"countryname\": \"Cyprus\",\n            \"capital\": \"Nicosia\",\n            \"zipcode\": \"357\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"61\",\n            \"countrycode\": \"CZ   \",\n            \"countryname\": \"Czech Rep.\",\n            \"capital\": \"Prague\",\n            \"zipcode\": \"420\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"62\",\n            \"countrycode\": \"DK   \",\n            \"countryname\": \"Denmark\",\n            \"capital\": \"Copenhagen\",\n            \"zipcode\": \"45\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"63\",\n            \"countrycode\": \"DJ   \",\n            \"countryname\": \"Djibouti\",\n            \"capital\": \"Djibouti\",\n            \"zipcode\": \"253\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"64\",\n            \"countrycode\": \"DM   \",\n            \"countryname\": \"Dominica\",\n            \"capital\": \"Roseau\",\n            \"zipcode\": \"1-767\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"65\",\n            \"countrycode\": \"DO   \",\n            \"countryname\": \"Dominican Republic\",\n            \"capital\": \"Santo Domingo\",\n            \"zipcode\": \"809\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"66\",\n            \"countrycode\": \"EC   \",\n            \"countryname\": \"Ecuador\",\n            \"capital\": \"Quito\",\n            \"zipcode\": \"593\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"67\",\n            \"countrycode\": \"EG   \",\n            \"countryname\": \"Egypt\",\n            \"capital\": \"Cairo\",\n            \"zipcode\": \"20\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"68\",\n            \"countrycode\": \"SV   \",\n            \"countryname\": \"El Salvador\",\n            \"capital\": \"San Salvador\",\n            \"zipcode\": \"503\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"69\",\n            \"countrycode\": \"GQ   \",\n            \"countryname\": \"Equatorial Guinea\",\n            \"capital\": \"Malabo\",\n            \"zipcode\": \"240\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"70\",\n            \"countrycode\": \"ER   \",\n            \"countryname\": \"Eritrea\",\n            \"capital\": \"Asmara\",\n            \"zipcode\": \"291\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"71\",\n            \"countrycode\": \"EE   \",\n            \"countryname\": \"Estonia\",\n            \"capital\": \"Tallinn\",\n            \"zipcode\": \"372\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"72\",\n            \"countrycode\": \"ET   \",\n            \"countryname\": \"Ethiopia\",\n            \"capital\": \"Addis Ababa\",\n            \"zipcode\": \"251\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"73\",\n            \"countrycode\": \"EU.IN\",\n            \"countryname\": \"European Union\",\n            \"capital\": \"Brussels\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"74\",\n            \"countrycode\": \"FK   \",\n            \"countryname\": \"Falkland Islands (Malvinas)\",\n            \"capital\": \"Stanley\",\n            \"zipcode\": \"500\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"75\",\n            \"countrycode\": \"FO   \",\n            \"countryname\": \"Faroe Islands\",\n            \"capital\": \"Torshavn\",\n            \"zipcode\": \"298\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"76\",\n            \"countrycode\": \"FJ   \",\n            \"countryname\": \"Fiji\",\n            \"capital\": \"Suva\",\n            \"zipcode\": \"679\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"77\",\n            \"countrycode\": \"FI   \",\n            \"countryname\": \"Finland\",\n            \"capital\": \"Helsinki\",\n            \"zipcode\": \"358\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"78\",\n            \"countrycode\": \"FR   \",\n            \"countryname\": \"France\",\n            \"capital\": \"Paris\",\n            \"zipcode\": \"33\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"79\",\n            \"countrycode\": \"GF   \",\n            \"countryname\": \"French Guiana\",\n            \"capital\": \"Cayenne\",\n            \"zipcode\": \"594\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"80\",\n            \"countrycode\": \"TF   \",\n            \"countryname\": \"French Southern Territories\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"81\",\n            \"countrycode\": \"GA   \",\n            \"countryname\": \"Gabon\",\n            \"capital\": \"Libreville\",\n            \"zipcode\": \"241\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"82\",\n            \"countrycode\": \"GM   \",\n            \"countryname\": \"Gambia\",\n            \"capital\": \"Banjul\",\n            \"zipcode\": \"220\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"83\",\n            \"countrycode\": \"GE   \",\n            \"countryname\": \"Georgia\",\n            \"capital\": \"Tbilisi\",\n            \"zipcode\": \"995\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"84\",\n            \"countrycode\": \"DE   \",\n            \"countryname\": \"Germany\",\n            \"capital\": \"Berlin\",\n            \"zipcode\": \"49\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"85\",\n            \"countrycode\": \"GH   \",\n            \"countryname\": \"Ghana\",\n            \"capital\": \"Accra\",\n            \"zipcode\": \"233\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"86\",\n            \"countrycode\": \"GI   \",\n            \"countryname\": \"Gibraltar\",\n            \"capital\": \"Gibraltar\",\n            \"zipcode\": \"350\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"87\",\n            \"countrycode\": \"GB   \",\n            \"countryname\": \"Great Britain\",\n            \"capital\": \"London\",\n            \"zipcode\": \"44\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"88\",\n            \"countrycode\": \"GR   \",\n            \"countryname\": \"Greece\",\n            \"capital\": \"Athens\",\n            \"zipcode\": \"30\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"89\",\n            \"countrycode\": \"GL   \",\n            \"countryname\": \"Greenland\",\n            \"capital\": \"Godthab\",\n            \"zipcode\": \"299\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"90\",\n            \"countrycode\": \"GD   \",\n            \"countryname\": \"Grenada\",\n            \"capital\": \"St. George's\",\n            \"zipcode\": \"1-473\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"91\",\n            \"countrycode\": \"GP   \",\n            \"countryname\": \"Guadeloupe (French)\",\n            \"capital\": \"Basse-Terre\",\n            \"zipcode\": \"590\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"92\",\n            \"countrycode\": \"GU   \",\n            \"countryname\": \"Guam (USA)\",\n            \"capital\": \"Agana\",\n            \"zipcode\": \"1-671\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"93\",\n            \"countrycode\": \"GT   \",\n            \"countryname\": \"Guatemala\",\n            \"capital\": \"Guatemala City\",\n            \"zipcode\": \"502\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"94\",\n            \"countrycode\": \"GG   \",\n            \"countryname\": \"Guernsey\",\n            \"capital\": \"St. Peter Port\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"95\",\n            \"countrycode\": \"GN   \",\n            \"countryname\": \"Guinea\",\n            \"capital\": \"Conakry\",\n            \"zipcode\": \"224\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"96\",\n            \"countrycode\": \"GW   \",\n            \"countryname\": \"Guinea Bissau\",\n            \"capital\": \"Bissau\",\n            \"zipcode\": \"245\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"97\",\n            \"countrycode\": \"GY   \",\n            \"countryname\": \"Guyana\",\n            \"capital\": \"Georgetown\",\n            \"zipcode\": \"592\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"98\",\n            \"countrycode\": \"HT   \",\n            \"countryname\": \"Haiti\",\n            \"capital\": \"Port-au-Prince\",\n            \"zipcode\": \"509\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"99\",\n            \"countrycode\": \"HM   \",\n            \"countryname\": \"Heard Island and McDonald Islands\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"100\",\n            \"countrycode\": \"HN   \",\n            \"countryname\": \"Honduras\",\n            \"capital\": \"Tegucigalpa\",\n            \"zipcode\": \"504\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"101\",\n            \"countrycode\": \"HK   \",\n            \"countryname\": \"Hong Kong\",\n            \"capital\": \"Victoria\",\n            \"zipcode\": \"852\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"102\",\n            \"countrycode\": \"HU   \",\n            \"countryname\": \"Hungary\",\n            \"capital\": \"Budapest\",\n            \"zipcode\": \"36\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"103\",\n            \"countrycode\": \"IS   \",\n            \"countryname\": \"Iceland\",\n            \"capital\": \"Reykjavik\",\n            \"zipcode\": \"354\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"2\",\n            \"countrycode\": \"IN   \",\n            \"countryname\": \"India\",\n            \"capital\": \"New Delhi\",\n            \"zipcode\": \"91\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"104\",\n            \"countrycode\": \"ID   \",\n            \"countryname\": \"Indonesia\",\n            \"capital\": \"Jakarta\",\n            \"zipcode\": \"62\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"105\",\n            \"countrycode\": \"IR   \",\n            \"countryname\": \"Iran\",\n            \"capital\": \"Tehran\",\n            \"zipcode\": \"98\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"106\",\n            \"countrycode\": \"IQ   \",\n            \"countryname\": \"Iraq\",\n            \"capital\": \"Baghdad\",\n            \"zipcode\": \"964\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"107\",\n            \"countrycode\": \"IE   \",\n            \"countryname\": \"Ireland\",\n            \"capital\": \"Dublin\",\n            \"zipcode\": \"353\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"108\",\n            \"countrycode\": \"IM   \",\n            \"countryname\": \"Isle of Man\",\n            \"capital\": \"Douglas\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"109\",\n            \"countrycode\": \"IL   \",\n            \"countryname\": \"Israel\",\n            \"capital\": \"Jerusalem\",\n            \"zipcode\": \"972\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"110\",\n            \"countrycode\": \"IT   \",\n            \"countryname\": \"Italy\",\n            \"capital\": \"Rome\",\n            \"zipcode\": \"39\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"111\",\n            \"countrycode\": \"CI   \",\n            \"countryname\": \"Ivory Coast\",\n            \"capital\": \"Abidjan\",\n            \"zipcode\": \"225\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"112\",\n            \"countrycode\": \"JM   \",\n            \"countryname\": \"Jamaica\",\n            \"capital\": \"Kingston\",\n            \"zipcode\": \"1-876\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"113\",\n            \"countrycode\": \"JP   \",\n            \"countryname\": \"Japan\",\n            \"capital\": \"Tokyo\",\n            \"zipcode\": \"81\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"114\",\n            \"countrycode\": \"JE   \",\n            \"countryname\": \"Jersey\",\n            \"capital\": \"Saint Helier\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"115\",\n            \"countrycode\": \"JO   \",\n            \"countryname\": \"Jordan\",\n            \"capital\": \"Amman\",\n            \"zipcode\": \"962\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"116\",\n            \"countrycode\": \"KZ   \",\n            \"countryname\": \"Kazakhstan\",\n            \"capital\": \"Astana\",\n            \"zipcode\": \"7\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"117\",\n            \"countrycode\": \"KE   \",\n            \"countryname\": \"Kenya\",\n            \"capital\": \"Nairobi\",\n            \"zipcode\": \"254\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"118\",\n            \"countrycode\": \"KI   \",\n            \"countryname\": \"Kiribati\",\n            \"capital\": \"Tarawa\",\n            \"zipcode\": \"686\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"119\",\n            \"countrycode\": \"KP   \",\n            \"countryname\": \"Korea-North\",\n            \"capital\": \"Pyongyang\",\n            \"zipcode\": \"850\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"120\",\n            \"countrycode\": \"KR   \",\n            \"countryname\": \"Korea-South\",\n            \"capital\": \"Seoul\",\n            \"zipcode\": \"82\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"121\",\n            \"countrycode\": \"KW   \",\n            \"countryname\": \"Kuwait\",\n            \"capital\": \"Kuwait City\",\n            \"zipcode\": \"965\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"122\",\n            \"countrycode\": \"KG   \",\n            \"countryname\": \"Kyrgyzstan\",\n            \"capital\": \"Bishkek\",\n            \"zipcode\": \"996\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"123\",\n            \"countrycode\": \"LA   \",\n            \"countryname\": \"Laos\",\n            \"capital\": \"Vientiane\",\n            \"zipcode\": \"856\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"124\",\n            \"countrycode\": \"LV   \",\n            \"countryname\": \"Latvia\",\n            \"capital\": \"Riga\",\n            \"zipcode\": \"371\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"125\",\n            \"countrycode\": \"LB   \",\n            \"countryname\": \"Lebanon\",\n            \"capital\": \"Beirut\",\n            \"zipcode\": \"961\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"126\",\n            \"countrycode\": \"LS   \",\n            \"countryname\": \"Lesotho\",\n            \"capital\": \"Maseru\",\n            \"zipcode\": \"266\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"127\",\n            \"countrycode\": \"LR   \",\n            \"countryname\": \"Liberia\",\n            \"capital\": \"Monrovia\",\n            \"zipcode\": \"231\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"128\",\n            \"countrycode\": \"LY   \",\n            \"countryname\": \"Libya\",\n            \"capital\": \"Tripoli\",\n            \"zipcode\": \"218\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"129\",\n            \"countrycode\": \"LI   \",\n            \"countryname\": \"Liechtenstein\",\n            \"capital\": \"Vaduz\",\n            \"zipcode\": \"423\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"130\",\n            \"countrycode\": \"LT   \",\n            \"countryname\": \"Lithuania\",\n            \"capital\": \"Vilnius\",\n            \"zipcode\": \"370\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"131\",\n            \"countrycode\": \"LU   \",\n            \"countryname\": \"Luxembourg\",\n            \"capital\": \"Luxembourg\",\n            \"zipcode\": \"352\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"132\",\n            \"countrycode\": \"MO   \",\n            \"countryname\": \"Macau\",\n            \"capital\": \"Macau\",\n            \"zipcode\": \"853\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"133\",\n            \"countrycode\": \"MK   \",\n            \"countryname\": \"Macedonia\",\n            \"capital\": \"Skopje\",\n            \"zipcode\": \"389\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"134\",\n            \"countrycode\": \"MG   \",\n            \"countryname\": \"Madagascar\",\n            \"capital\": \"Antananarivo\",\n            \"zipcode\": \"261\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"135\",\n            \"countrycode\": \"MW   \",\n            \"countryname\": \"Malawi\",\n            \"capital\": \"Lilongwe\",\n            \"zipcode\": \"265\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"136\",\n            \"countrycode\": \"MY   \",\n            \"countryname\": \"Malaysia\",\n            \"capital\": \"Kuala Lumpur\",\n            \"zipcode\": \"60\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"7\",\n            \"countrycode\": \"MV   \",\n            \"countryname\": \"Maldives\",\n            \"capital\": \"Male\",\n            \"zipcode\": \"960\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"137\",\n            \"countrycode\": \"ML   \",\n            \"countryname\": \"Mali\",\n            \"capital\": \"Bamako\",\n            \"zipcode\": \"223\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"138\",\n            \"countrycode\": \"MT   \",\n            \"countryname\": \"Malta\",\n            \"capital\": \"Valletta\",\n            \"zipcode\": \"356\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"139\",\n            \"countrycode\": \"MH   \",\n            \"countryname\": \"Marshall Islands\",\n            \"capital\": \"Majuro\",\n            \"zipcode\": \"692\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"140\",\n            \"countrycode\": \"MQ   \",\n            \"countryname\": \"Martinique (French)\",\n            \"capital\": \"Fort-de-France\",\n            \"zipcode\": \"596\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"141\",\n            \"countrycode\": \"MR   \",\n            \"countryname\": \"Mauritania\",\n            \"capital\": \"Nouakchott\",\n            \"zipcode\": \"222\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"142\",\n            \"countrycode\": \"MU   \",\n            \"countryname\": \"Mauritius\",\n            \"capital\": \"Port Louis\",\n            \"zipcode\": \"230\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"143\",\n            \"countrycode\": \"YT   \",\n            \"countryname\": \"Mayotte\",\n            \"capital\": \"Dzaoudzi\",\n            \"zipcode\": \"269\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"144\",\n            \"countrycode\": \"MX   \",\n            \"countryname\": \"Mexico\",\n            \"capital\": \"Mexico City\",\n            \"zipcode\": \"52\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"145\",\n            \"countrycode\": \"FM   \",\n            \"countryname\": \"Micronesia\",\n            \"capital\": \"Palikir\",\n            \"zipcode\": \"691\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"146\",\n            \"countrycode\": \"MD   \",\n            \"countryname\": \"Moldova\",\n            \"capital\": \"Kishinev\",\n            \"zipcode\": \"373\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"147\",\n            \"countrycode\": \"MC   \",\n            \"countryname\": \"Monaco\",\n            \"capital\": \"Monaco\",\n            \"zipcode\": \"377\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"148\",\n            \"countrycode\": \"MN   \",\n            \"countryname\": \"Mongolia\",\n            \"capital\": \"Ulan Bator\",\n            \"zipcode\": \"976\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"149\",\n            \"countrycode\": \"ME   \",\n            \"countryname\": \"Montenegro\",\n            \"capital\": \"Podgorica\",\n            \"zipcode\": \"382\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"150\",\n            \"countrycode\": \"MS   \",\n            \"countryname\": \"Montserrat\",\n            \"capital\": \"Plymouth\",\n            \"zipcode\": \"1-664\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"151\",\n            \"countrycode\": \"MA   \",\n            \"countryname\": \"Morocco\",\n            \"capital\": \"Rabat\",\n            \"zipcode\": \"212\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"152\",\n            \"countrycode\": \"MZ   \",\n            \"countryname\": \"Mozambique\",\n            \"capital\": \"Maputo\",\n            \"zipcode\": \"258\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"153\",\n            \"countrycode\": \"MM   \",\n            \"countryname\": \"Myanmar\",\n            \"capital\": \"Naypyidaw\",\n            \"zipcode\": \"95\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"154\",\n            \"countrycode\": \"NA   \",\n            \"countryname\": \"Namibia\",\n            \"capital\": \"Windhoek\",\n            \"zipcode\": \"264\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"155\",\n            \"countrycode\": \"NR   \",\n            \"countryname\": \"Nauru\",\n            \"capital\": \"Yaren\",\n            \"zipcode\": \"674\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"1\",\n            \"countrycode\": \"NP   \",\n            \"countryname\": \"Nepal\",\n            \"capital\": \"Kathmandu\",\n            \"zipcode\": \"977\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"156\",\n            \"countrycode\": \"NL   \",\n            \"countryname\": \"Netherlands\",\n            \"capital\": \"Amsterdam\",\n            \"zipcode\": \"31\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"157\",\n            \"countrycode\": \"AN   \",\n            \"countryname\": \"Netherlands Antilles\",\n            \"capital\": \"Willemstad\",\n            \"zipcode\": \"599\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"158\",\n            \"countrycode\": \"NC   \",\n            \"countryname\": \"New Caledonia (French)\",\n            \"capital\": \"Noumea\",\n            \"zipcode\": \"687\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"159\",\n            \"countrycode\": \"NZ   \",\n            \"countryname\": \"New Zealand\",\n            \"capital\": \"Wellington\",\n            \"zipcode\": \"64\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"160\",\n            \"countrycode\": \"NI   \",\n            \"countryname\": \"Nicaragua\",\n            \"capital\": \"Managua\",\n            \"zipcode\": \"505\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"161\",\n            \"countrycode\": \"NE   \",\n            \"countryname\": \"Niger\",\n            \"capital\": \"Niamey\",\n            \"zipcode\": \"227\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"162\",\n            \"countrycode\": \"NG   \",\n            \"countryname\": \"Nigeria\",\n            \"capital\": \"Lagos\",\n            \"zipcode\": \"234\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"163\",\n            \"countrycode\": \"NU   \",\n            \"countryname\": \"Niue\",\n            \"capital\": \"Alofi\",\n            \"zipcode\": \"683\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"164\",\n            \"countrycode\": \"NF   \",\n            \"countryname\": \"Norfolk Island\",\n            \"capital\": \"Kingston\",\n            \"zipcode\": \"672\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"165\",\n            \"countrycode\": \"MP   \",\n            \"countryname\": \"Northern Mariana Islands\",\n            \"capital\": \"Saipan\",\n            \"zipcode\": \"670\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"166\",\n            \"countrycode\": \"NO   \",\n            \"countryname\": \"Norway\",\n            \"capital\": \"Oslo\",\n            \"zipcode\": \"47\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"167\",\n            \"countrycode\": \"OM   \",\n            \"countryname\": \"Oman\",\n            \"capital\": \"Muscat\",\n            \"zipcode\": \"968\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"5\",\n            \"countrycode\": \"PK   \",\n            \"countryname\": \"Pakistan\",\n            \"capital\": \"Islamabad\",\n            \"zipcode\": \"92\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"168\",\n            \"countrycode\": \"PW   \",\n            \"countryname\": \"Palau\",\n            \"capital\": \"Koror\",\n            \"zipcode\": \"680\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"169\",\n            \"countrycode\": \"PA   \",\n            \"countryname\": \"Panama\",\n            \"capital\": \"Panama City\",\n            \"zipcode\": \"507\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"170\",\n            \"countrycode\": \"PG   \",\n            \"countryname\": \"Papua New Guinea\",\n            \"capital\": \"Port Moresby\",\n            \"zipcode\": \"675\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"171\",\n            \"countrycode\": \"PY   \",\n            \"countryname\": \"Paraguay\",\n            \"capital\": \"Asuncion\",\n            \"zipcode\": \"595\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"172\",\n            \"countrycode\": \"PE   \",\n            \"countryname\": \"Peru\",\n            \"capital\": \"Lima\",\n            \"zipcode\": \"51\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"173\",\n            \"countrycode\": \"PH   \",\n            \"countryname\": \"Philippines\",\n            \"capital\": \"Manila\",\n            \"zipcode\": \"63\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"174\",\n            \"countrycode\": \"PN   \",\n            \"countryname\": \"Pitcairn Island\",\n            \"capital\": \"Adamstown\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"175\",\n            \"countrycode\": \"PL   \",\n            \"countryname\": \"Poland\",\n            \"capital\": \"Warsaw\",\n            \"zipcode\": \"48\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"176\",\n            \"countrycode\": \"PF   \",\n            \"countryname\": \"Polynesia (French)\",\n            \"capital\": \"Papeete\",\n            \"zipcode\": \"689\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"177\",\n            \"countrycode\": \"PT   \",\n            \"countryname\": \"Portugal\",\n            \"capital\": \"Lisbon\",\n            \"zipcode\": \"351\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"178\",\n            \"countrycode\": \"PR   \",\n            \"countryname\": \"Puerto Rico\",\n            \"capital\": \"San Juan\",\n            \"zipcode\": \"1-787\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"179\",\n            \"countrycode\": \"QA   \",\n            \"countryname\": \"Qatar\",\n            \"capital\": \"Doha\",\n            \"zipcode\": \"974\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"180\",\n            \"countrycode\": \"RE   \",\n            \"countryname\": \"Reunion (French)\",\n            \"capital\": \"Saint-Denis\",\n            \"zipcode\": \"262\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"181\",\n            \"countrycode\": \"RO   \",\n            \"countryname\": \"Romania\",\n            \"capital\": \"Bucharest\",\n            \"zipcode\": \"40\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"182\",\n            \"countrycode\": \"RU   \",\n            \"countryname\": \"Russia\",\n            \"capital\": \"Moscow\",\n            \"zipcode\": \"7\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"183\",\n            \"countrycode\": \"RW   \",\n            \"countryname\": \"Rwanda\",\n            \"capital\": \"Kigali\",\n            \"zipcode\": \"250\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"184\",\n            \"countrycode\": \"SH   \",\n            \"countryname\": \"Saint Helena\",\n            \"capital\": \"Jamestown\",\n            \"zipcode\": \"290\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"185\",\n            \"countrycode\": \"KN   \",\n            \"countryname\": \"Saint Kitts & Nevis Anguilla\",\n            \"capital\": \"Basseterre\",\n            \"zipcode\": \"1-869\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"186\",\n            \"countrycode\": \"LC   \",\n            \"countryname\": \"Saint Lucia\",\n            \"capital\": \"Castries\",\n            \"zipcode\": \"1-758\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"187\",\n            \"countrycode\": \"PM   \",\n            \"countryname\": \"Saint Pierre and Miquelon\",\n            \"capital\": \"St. Pierre\",\n            \"zipcode\": \"508\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"188\",\n            \"countrycode\": \"VC   \",\n            \"countryname\": \"Saint Vincent & Grenadines\",\n            \"capital\": \"Kingstown\",\n            \"zipcode\": \"1-784\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"189\",\n            \"countrycode\": \"WS   \",\n            \"countryname\": \"Samoa\",\n            \"capital\": \"Apia\",\n            \"zipcode\": \"684\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"190\",\n            \"countrycode\": \"SM   \",\n            \"countryname\": \"San Marino\",\n            \"capital\": \"San Marino\",\n            \"zipcode\": \"378\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"191\",\n            \"countrycode\": \"ST   \",\n            \"countryname\": \"Sao Tome and Principe\",\n            \"capital\": \"Sao Tome\",\n            \"zipcode\": \"239\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"192\",\n            \"countrycode\": \"SA   \",\n            \"countryname\": \"Saudi Arabia\",\n            \"capital\": \"Riyadh\",\n            \"zipcode\": \"966\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"193\",\n            \"countrycode\": \"SN   \",\n            \"countryname\": \"Senegal\",\n            \"capital\": \"Dakar\",\n            \"zipcode\": \"221\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"194\",\n            \"countrycode\": \"RS   \",\n            \"countryname\": \"Serbia\",\n            \"capital\": \"Belgrade\",\n            \"zipcode\": \"381\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"195\",\n            \"countrycode\": \"SC   \",\n            \"countryname\": \"Seychelles\",\n            \"capital\": \"Victoria\",\n            \"zipcode\": \"248\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"196\",\n            \"countrycode\": \"SL   \",\n            \"countryname\": \"Sierra Leone\",\n            \"capital\": \"Freetown\",\n            \"zipcode\": \"232\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"197\",\n            \"countrycode\": \"SG   \",\n            \"countryname\": \"Singapore\",\n            \"capital\": \"Singapore\",\n            \"zipcode\": \"65\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"198\",\n            \"countrycode\": \"SK   \",\n            \"countryname\": \"Slovakia\",\n            \"capital\": \"Bratislava\",\n            \"zipcode\": \"421\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"199\",\n            \"countrycode\": \"SI   \",\n            \"countryname\": \"Slovenia\",\n            \"capital\": \"Ljubljana\",\n            \"zipcode\": \"386\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"200\",\n            \"countrycode\": \"SB   \",\n            \"countryname\": \"Solomon Islands\",\n            \"capital\": \"Honiara\",\n            \"zipcode\": \"677\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"201\",\n            \"countrycode\": \"SO   \",\n            \"countryname\": \"Somalia\",\n            \"capital\": \"Mogadishu\",\n            \"zipcode\": \"252\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"202\",\n            \"countrycode\": \"ZA   \",\n            \"countryname\": \"South Africa\",\n            \"capital\": \"Pretoria\",\n            \"zipcode\": \"27\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"203\",\n            \"countrycode\": \"GS   \",\n            \"countryname\": \"South Georgia & South Sandwich Islands\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"204\",\n            \"countrycode\": \"SS   \",\n            \"countryname\": \"South Sudan\",\n            \"capital\": \"Ramciel\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"205\",\n            \"countrycode\": \"ES   \",\n            \"countryname\": \"Spain\",\n            \"capital\": \"Madrid\",\n            \"zipcode\": \"34\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"6\",\n            \"countrycode\": \"LK   \",\n            \"countryname\": \"Sri Lanka\",\n            \"capital\": \"Colombo\",\n            \"zipcode\": \"94\",\n            \"issaarccountry\": \"t\"\n        },\n        {\n            \"countryid\": \"206\",\n            \"countrycode\": \"SD   \",\n            \"countryname\": \"Sudan\",\n            \"capital\": \"Khartoum\",\n            \"zipcode\": \"249\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"207\",\n            \"countrycode\": \"SR   \",\n            \"countryname\": \"Suriname\",\n            \"capital\": \"Paramaribo\",\n            \"zipcode\": \"597\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"208\",\n            \"countrycode\": \"SJ   \",\n            \"countryname\": \"Svalbard and Jan Mayen Islands\",\n            \"capital\": \"Longyearbyen\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"209\",\n            \"countrycode\": \"SZ   \",\n            \"countryname\": \"Swaziland\",\n            \"capital\": \"Mbabane\",\n            \"zipcode\": \"268\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"210\",\n            \"countrycode\": \"SE   \",\n            \"countryname\": \"Sweden\",\n            \"capital\": \"Stockholm\",\n            \"zipcode\": \"46\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"211\",\n            \"countrycode\": \"CH   \",\n            \"countryname\": \"Switzerland\",\n            \"capital\": \"Bern\",\n            \"zipcode\": \"41\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"212\",\n            \"countrycode\": \"SY   \",\n            \"countryname\": \"Syria\",\n            \"capital\": \"Damascus\",\n            \"zipcode\": \"963\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"213\",\n            \"countrycode\": \"TW   \",\n            \"countryname\": \"Taiwan\",\n            \"capital\": \"Taipei\",\n            \"zipcode\": \"886\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"214\",\n            \"countrycode\": \"TJ   \",\n            \"countryname\": \"Tajikistan\",\n            \"capital\": \"Dushanbe\",\n            \"zipcode\": \"992\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"215\",\n            \"countrycode\": \"TZ   \",\n            \"countryname\": \"Tanzania\",\n            \"capital\": \"Dodoma\",\n            \"zipcode\": \"255\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"216\",\n            \"countrycode\": \"TH   \",\n            \"countryname\": \"Thailand\",\n            \"capital\": \"Bangkok\",\n            \"zipcode\": \"66\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"217\",\n            \"countrycode\": \"TG   \",\n            \"countryname\": \"Togo\",\n            \"capital\": \"Lome\",\n            \"zipcode\": \"228\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"218\",\n            \"countrycode\": \"TK   \",\n            \"countryname\": \"Tokelau\",\n            \"capital\": \"None\",\n            \"zipcode\": \"690\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"219\",\n            \"countrycode\": \"TO   \",\n            \"countryname\": \"Tonga\",\n            \"capital\": \"Nuku'alofa\",\n            \"zipcode\": \"676\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"220\",\n            \"countrycode\": \"TT   \",\n            \"countryname\": \"Trinidad and Tobago\",\n            \"capital\": \"Port of Spain\",\n            \"zipcode\": \"1-868\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"221\",\n            \"countrycode\": \"TN   \",\n            \"countryname\": \"Tunisia\",\n            \"capital\": \"Tunis\",\n            \"zipcode\": \"216\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"222\",\n            \"countrycode\": \"TR   \",\n            \"countryname\": \"Turkey\",\n            \"capital\": \"Ankara\",\n            \"zipcode\": \"90\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"223\",\n            \"countrycode\": \"TM   \",\n            \"countryname\": \"Turkmenistan\",\n            \"capital\": \"Ashgabat\",\n            \"zipcode\": \"993\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"224\",\n            \"countrycode\": \"TC   \",\n            \"countryname\": \"Turks and Caicos Islands\",\n            \"capital\": \"Grand Turk\",\n            \"zipcode\": \"1-649\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"225\",\n            \"countrycode\": \"TV   \",\n            \"countryname\": \"Tuvalu\",\n            \"capital\": \"Funafuti\",\n            \"zipcode\": \"688\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"229\",\n            \"countrycode\": \"UG   \",\n            \"countryname\": \"Uganda\",\n            \"capital\": \"Kampala\",\n            \"zipcode\": \"256\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"226\",\n            \"countrycode\": \"UK   \",\n            \"countryname\": \"U.K.\",\n            \"capital\": \"London\",\n            \"zipcode\": \"44\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"230\",\n            \"countrycode\": \"UA   \",\n            \"countryname\": \"Ukraine\",\n            \"capital\": \"Kiev\",\n            \"zipcode\": \"380\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"231\",\n            \"countrycode\": \"AE   \",\n            \"countryname\": \"United Arab Emirates\",\n            \"capital\": \"Abu Dhabi\",\n            \"zipcode\": \"971\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"232\",\n            \"countrycode\": \"UY   \",\n            \"countryname\": \"Uruguay\",\n            \"capital\": \"Montevideo\",\n            \"zipcode\": \"598\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"227\",\n            \"countrycode\": \"US   \",\n            \"countryname\": \"USA\",\n            \"capital\": \"Washington\",\n            \"zipcode\": \"1\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"228\",\n            \"countrycode\": \"UM   \",\n            \"countryname\": \"USA Minor Outlying Islands\",\n            \"capital\": \"None\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"233\",\n            \"countrycode\": \"UZ   \",\n            \"countryname\": \"Uzbekistan\",\n            \"capital\": \"Tashkent\",\n            \"zipcode\": \"998\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"234\",\n            \"countrycode\": \"VU   \",\n            \"countryname\": \"Vanuatu\",\n            \"capital\": \"Port Vila\",\n            \"zipcode\": \"678\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"235\",\n            \"countrycode\": \"VA   \",\n            \"countryname\": \"Vatican\",\n            \"capital\": \"Vatican City\",\n            \"zipcode\": \"39\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"236\",\n            \"countrycode\": \"VE   \",\n            \"countryname\": \"Venezuela\",\n            \"capital\": \"Caracas\",\n            \"zipcode\": \"58\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"237\",\n            \"countrycode\": \"VN   \",\n            \"countryname\": \"Vietnam\",\n            \"capital\": \"Hanoi\",\n            \"zipcode\": \"84\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"238\",\n            \"countrycode\": \"VG   \",\n            \"countryname\": \"Virgin Islands (British)\",\n            \"capital\": \"Road Town\",\n            \"zipcode\": \"1-284\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"239\",\n            \"countrycode\": \"VI   \",\n            \"countryname\": \"Virgin Islands (USA)\",\n            \"capital\": \"Charlotte Amalie\",\n            \"zipcode\": \"1-340\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"240\",\n            \"countrycode\": \"WF   \",\n            \"countryname\": \"Wallis and Futuna Islands\",\n            \"capital\": \"Mata-Utu\",\n            \"zipcode\": \"681\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"241\",\n            \"countrycode\": \"EH   \",\n            \"countryname\": \"Western Sahara\",\n            \"capital\": \"El Aaiun\",\n            \"zipcode\": null,\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"242\",\n            \"countrycode\": \"YE   \",\n            \"countryname\": \"Yemen\",\n            \"capital\": \"San'a\",\n            \"zipcode\": \"967\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"243\",\n            \"countrycode\": \"ZM   \",\n            \"countryname\": \"Zambia\",\n            \"capital\": \"Lusaka\",\n            \"zipcode\": \"260\",\n            \"issaarccountry\": \"f\"\n        },\n        {\n            \"countryid\": \"244\",\n            \"countrycode\": \"ZW   \",\n            \"countryname\": \"Zimbabwe\",\n            \"capital\": \"Harare\",\n            \"zipcode\": \"263\",\n            \"issaarccountry\": \"f\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Patient data by inpatient id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFycHN0aEBnbWFpbC5jb20iLCJpYXQiOjE2NTY1NjA0OTksImV4cCI6MTY1NjU2NDA5OX0.1vw9n3JhT3-FdF9QRfjQnM9h7vlHk3Aopd7XomqqFeM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "inPatientId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/ward/getPatientDetail",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"ward",
+						"getPatientDetail"
+					]
+				},
+				"description": "Get patient detail by inpatientid.\r\nIn patient id is compulsory."
+			},
+			"response": [
+				{
+					"name": "Get Patient data by inpatient id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "inPatientId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/ward/getPatientDetail",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"ward",
+								"getPatientDetail"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656561826.944010"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "https://api.midasehealth.com/?debugbar_time=1656561826.944010"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 04:03:46 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 404,\n    \"error\": 404,\n    \"messages\": {\n        \"error\": \"No Data found\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Nurse note list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFycHN0aEBnbWFpbC5jb20iLCJpYXQiOjE2NTY1NjA0OTksImV4cCI6MTY1NjU2NDA5OX0.1vw9n3JhT3-FdF9QRfjQnM9h7vlHk3Aopd7XomqqFeM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "inPatientId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "noteType",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/getNurseNoteList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"getNurseNoteList"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Nurse note list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientId",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "inPatientId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "noteType",
+									"value": "A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/getNurseNoteList",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"getNurseNoteList"
+							],
+							"query": [
+								{
+									"key": "patientId",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656563004.714900"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.113/hmisApi/?debugbar_time=1656563004.714900"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 04:23:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"messages\": \"success\",\n    \"nursingNote\": [\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"10:11:12\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"10:11:12\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:58:19\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"1\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:58:25\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"1\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:58:28\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:58:53\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:59:02\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"12:59:10\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"13:01:34\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        },\n        {\n            \"datapostdate\": null,\n            \"dataposttime\": \"14:51:55\",\n            \"datapostby\": \"midas\",\n            \"nursenote\": \"this is nurse note test\",\n            \"patientid\": \"1\",\n            \"inpatientid\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Nursing note template",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtoYXRpd2FkYWJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTY5MjgwNzMsImV4cCI6MTY1NjkzMTY3M30.Exokc3wsNY-hKj6pn9WBQcQwfVLE8CJYrv1q0vXFwRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codeFor",
+							"value": "NUOB_NOTE",
+							"type": "text"
+						},
+						{
+							"key": "codeFrom",
+							"value": "IPD",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "depId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/getNursingTemplates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"getNursingTemplates"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Nursing note template",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codeFor",
+									"value": "NUOB_NOTE",
+									"type": "text"
+								},
+								{
+									"key": "codeFrom",
+									"value": "IPD",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "depId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/getNursingTemplates",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"getNursingTemplates"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656928082.008900"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "htpp://localhost/?debugbar_time=1656928082.008900"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Jul 2022 09:48:02 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"messages\": \"success\",\n    \"templateData\": [\n        {\n            \"pstm_id\": \"2\",\n            \"pstm_keyword\": \"Test\",\n            \"pstm_content\": \"This is content test.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        },\n        {\n            \"pstm_id\": \"3\",\n            \"pstm_keyword\": \"Test\",\n            \"pstm_content\": \"This is content test.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        },\n        {\n            \"pstm_id\": \"4\",\n            \"pstm_keyword\": \"TTs\",\n            \"pstm_content\": \"This is second test for nursing template.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        },\n        {\n            \"pstm_id\": \"5\",\n            \"pstm_keyword\": \"TTs\",\n            \"pstm_content\": \"This is second test for nursing template.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        },\n        {\n            \"pstm_id\": \"6\",\n            \"pstm_keyword\": \"TTs\",\n            \"pstm_content\": \"This is second test for nursing template.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        },\n        {\n            \"pstm_id\": \"7\",\n            \"pstm_keyword\": \"TTs\",\n            \"pstm_content\": \"This is second test for nursing template.\",\n            \"pstm_from\": \"IPD\",\n            \"pstm_for\": \"NUOB_NOTE\",\n            \"pstm_depid\": \"1\",\n            \"pstm_user\": \"1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add template for nursing ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFycHN0aEBnbWFpbC5jb20iLCJpYXQiOjE2NTY1Nzc1NjQsImV4cCI6MTY1NjU4MTE2NH0.rmyhpaqoI9L_Ih6vE7HklpvXf0otQ4QR7-X-a30M-UI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "TTs",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This is second test for nursing template.",
+							"type": "text"
+						},
+						{
+							"key": "codeFrom",
+							"value": "IPD",
+							"type": "text"
+						},
+						{
+							"key": "codeFor",
+							"value": "NUOB_NOTE",
+							"type": "text"
+						},
+						{
+							"key": "depId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/addNursingTemplates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"addNursingTemplates"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add template for nursing ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "TTs",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "This is second test for nursing template.",
+									"type": "text"
+								},
+								{
+									"key": "codeFrom",
+									"value": "IPD",
+									"type": "text"
+								},
+								{
+									"key": "codeFor",
+									"value": "NUOB_NOTE",
+									"type": "text"
+								},
+								{
+									"key": "depId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/addShortCodes",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"addShortCodes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656577895.138058"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.113/hmisApi/?debugbar_time=1656577895.138058"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Jun 2022 08:31:35 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": true,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Nursing Note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtoYXRpd2FkYWJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTY5MzM0NzEsImV4cCI6MTY1NjkzNzA3MX0.V6TS9CYZM__qaEXuE8mubKzanBvEhEL6EouDXheFJew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "codeId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "deleteFor",
+							"value": "NUOB_NOTE",
+							"type": "text"
+						},
+						{
+							"key": "deleteFrom",
+							"value": "IPD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/deleteNursingTemplate",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"deleteNursingTemplate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Nursing note",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "codeId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "deleteFor",
+									"value": "NUOB_NOTE",
+									"type": "text"
+								},
+								{
+									"key": "deleteFrom",
+									"value": "IPD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/deleteNursingTemplate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"deleteNursingTemplate"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656933526.809772"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "htpp://localhost/?debugbar_time=1656933526.809772"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Jul 2022 11:18:46 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully deleted.\",\n    \"affectedRows\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get departments for ward",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtoYXRpd2FkYWJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTY5OTYzMTIsImV4cCI6MTY1Njk5OTkxMn0.4vrfv9kotxZHlAELvDfH0KymNm01UINIToibop3rab8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.midasehealth.com/ward/getDepartments",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"ward",
+						"getDepartments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get departments for ward",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.midasehealth.com/ward/getDepartments",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"ward",
+								"getDepartments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1656996345.896568"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "htpp://localhost/?debugbar_time=1656996345.896568"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Jul 2022 04:45:45 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"departmentData\": [\n        {\n            \"depId\": \"1\",\n            \"depName\": \"TEST\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add nursing note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTg3NDgwODksImV4cCI6MTY1ODc1MTY4OX0.1zBFnMumF4did_dwGcUEkcZG3Og9d9G3qIFqG55grM0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "inPatientId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "dataPostBy",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "nurseNote",
+							"value": "this is test",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2079/01/01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/addNurseNote",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"addNurseNote"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add nursing note",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inPatientId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "dataPostBy",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "nurseNote",
+									"value": "this is test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/addNurseNote",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"addNurseNote"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1657453461.156054"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "htpp://localhost/?debugbar_time=1657453461.156054"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Jul 2022 11:44:21 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"messages\": \"success\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get doctors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTg3NDQxNjksImV4cCI6MTY1ODc0Nzc2OX0.9ZNt8TsqxB2cqW9OYiXFN7pXRvIsekr7MYRYHa--A2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/ward/getDoctors",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"ward",
+						"getDoctors"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get doctors",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.midasehealth.com/ward/getDoctors",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"ward",
+								"getDoctors"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1658744183.413346"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1658744183.413346"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 10:16:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"doctorsData\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Update nursing note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NTkwNzE2MjMsImV4cCI6MTY1OTA3NTIyM30.bgOgANL-lMX1jfahilwKRA1kJzlR4de-G6tX4rYhMpI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2022/07/29",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "10:40",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "This is note test.",
+							"type": "text"
+						},
+						{
+							"key": "nuobId",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/nursing/updateNursingNote",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"nursing",
+						"updateNursingNote"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update nursing note",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2022/07/29",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10:40",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "This is note test.",
+									"type": "text"
+								},
+								{
+									"key": "nuobId",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "patientId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/nursing/updateNursingNote",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"nursing",
+								"updateNursingNote"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1659071909.110440"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1659071909.110440"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Jul 2022 05:18:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Updated\",\n    \"affectedRows\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get ward patient list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NjA0NzMxOTUsImV4cCI6MTY2MDQ3Njc5NX0.YkskbXwIyZ0lFyOfxt-imPacVEe9euT5SyoawB1xJXE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fromDate",
+							"value": "2079/05/01",
+							"type": "text"
+						},
+						{
+							"key": "toDate",
+							"value": "2079/05/01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/ward/getWardPatientList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"ward",
+						"getWardPatientList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get patient list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2NjY1MjksImV4cCI6MTY3NzY3MDEyOX0.zLZFe4-hFhW4vahe3BkVW8C2C6uNjfxKxskRam4c13o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fromDate",
+							"value": "2078/08/19",
+							"type": "text"
+						},
+						{
+							"key": "toDate",
+							"value": "2079/10/01",
+							"type": "text"
+						},
+						{
+							"key": "labSection",
+							"value": "labreceivelist",
+							"type": "text"
+						},
+						{
+							"key": "statusFilter",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "deptFilter",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "catFilter",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "globalSearchBy",
+							"value": "LABNO",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "globalSearchValue",
+							"value": "09050557",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getPatientList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getPatientList"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get patient list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fromDate",
+									"value": "2079/08/19",
+									"type": "text"
+								},
+								{
+									"key": "toDate",
+									"value": "2079/10/01",
+									"type": "text"
+								},
+								{
+									"key": "labSection",
+									"value": "labreceivelist",
+									"type": "text"
+								},
+								{
+									"key": "statusFilter",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "deptFilter",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "catFilter",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "globalSearchBy",
+									"value": "LABNO",
+									"type": "text"
+								},
+								{
+									"key": "globalSearchValue",
+									"value": "09050557",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/lab/getPatientList",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"lab",
+								"getPatientList"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1671775608.927086"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1671775608.927086"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Dec 2022 06:06:48 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"messages\": \"success\",\n    \"patientListData\": {\n        \"result\": [\n            {\n                \"PATIENTTESTID\": \"5036\",\n                \"LABNO\": \"09050557\",\n                \"SAMPLENO\": \"2079-N557\",\n                \"ISAUTHORIZED\": \"N\",\n                \"ISREPORTHOLD\": \"N\",\n                \"VISITID\": \"3229\",\n                \"ISDEPARTMENTRECEIVED\": \"N\",\n                \"PRINTDATE\": null,\n                \"PATIENTID\": \"79000244\",\n                \"INPATIENTID\": \"0\",\n                \"ISLABRECEIVED\": \"N\",\n                \"PATIENTNAME\": \"Test2 Test2\",\n                \"AGE\": \"90 Y\",\n                \"AGETYPE\": \"YEAR\",\n                \"GENDER\": \"MALE\",\n                \"AGEGENDER\": \"90 Y / M\",\n                \"MOBILENO\": \"9801985738\",\n                \"DEPID\": \"56\",\n                \"TESTNAMEID\": \"529\",\n                \"TESTNAMECODE\": \"BCH39\",\n                \"TESTNAME\": \"BLOOD GLUCOSE PP\",\n                \"TESTDATE\": \"2079/09/05\",\n                \"TESTTIME\": \"12:05:36\",\n                \"BILLNO\": \"CS79/80-0000765\",\n                \"TESTPROGRESSSTATUS\": \"3\",\n                \"BILLDETAILID\": \"20221220120255600\",\n                \"SERVICEBILLDETAILID\": \"0\",\n                \"BEDINFO\": null,\n                \"PATIENTTYPE\": \"OPD\",\n                \"ISVERIFIED\": \"N\",\n                \"REFFEREDBY\": \"NISHA SHRESTHA \",\n                \"ISCULTURETEST\": \"N\",\n                \"ISMACHINERESULT\": \"N\",\n                \"LABRECEIVEDBY\": null,\n                \"RESULTENTEREDBY\": null,\n                \"VERIFIEDBY\": null,\n                \"AUTHORIZEDBY\": null,\n                \"ISMAILSENT\": \"N\",\n                \"SCHEMEID\": \"0\",\n                \"SAMPLEDATETIME\": \"2079/09/05 12:31:22\",\n                \"SAMPLEEXPIRYTIME\": null,\n                \"ISSTAT\": null,\n                \"ISPARTIAL\": \"N\",\n                \"ISSAMPLEREMARKS\": \"Y\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get patient test ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjcyMzc2NjczLCJleHAiOjE2NzI0MTI2NzN9.r8emMLoQkBS7SYAyEeJVFiRh8aPF9_oK_lk-pSQ7s5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fromDate",
+							"value": "2079/08/19",
+							"type": "text"
+						},
+						{
+							"key": "toDate",
+							"value": "2079/10/01",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "notreceived",
+							"type": "text"
+						},
+						{
+							"key": "labSection",
+							"value": "samplecollection",
+							"type": "text"
+						},
+						{
+							"key": "globalSearchValue",
+							"value": "09070567",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "globalSearchBy",
+							"value": "LABNO",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "patientTypeFilter",
+							"value": "ALL",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "statusFitler",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.100.105:8080/newdevapi/lab/getPatientList",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"100",
+						"105"
+					],
+					"port": "8080",
+					"path": [
+						"newdevapi",
+						"lab",
+						"getPatientList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sample collection data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2Njk2MjYsImV4cCI6MTY3NzY3MzIyNn0.yRzdF7iGyMlykdGPNrCzeSY9C369w9FrF9ZzlL1cK8M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "billNo",
+							"value": "CS79/80-0001120",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "79000360",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getSampleCollectionData",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getSampleCollectionData"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sample collection data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "billNo",
+									"value": "CS79/80-0000800",
+									"type": "text"
+								},
+								{
+									"key": "patientId",
+									"value": "79000252",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/lab/getSampleCollectionData",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"lab",
+								"getSampleCollectionData"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1672556515.685505"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1672556515.685505"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jan 2023 07:01:55 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"testToBeCollected\": [\n        {\n            \"PATIENTTESTID\": \"5578\",\n            \"INPATIENTID\": \"0\",\n            \"testname\": \"ESR\",\n            \"TESTNAMEID\": \"133\",\n            \"BILLNO\": \"CS79/80-0000800\",\n            \"containercolor\": null,\n            \"samplequantity\": null,\n            \"container\": null,\n            \"samplesource\": null\n        },\n        {\n            \"PATIENTTESTID\": \"5579\",\n            \"INPATIENTID\": \"0\",\n            \"testname\": \"HB\",\n            \"TESTNAMEID\": \"531\",\n            \"BILLNO\": \"CS79/80-0000800\",\n            \"containercolor\": null,\n            \"samplequantity\": null,\n            \"container\": null,\n            \"samplesource\": null\n        }\n    ],\n    \"patientInfo\": {\n        \"PATIENTID\": \"79000252\",\n        \"PATIENTNAME\": \"ATUL SHRESTHA\",\n        \"AGE\": \"30\",\n        \"AGETYPE\": \"YEAR\",\n        \"GENDER\": \"MALE\",\n        \"ADDRESS\": \"KATHMANDU\",\n        \"MOBILENO\": \"1234567890\",\n        \"BILLNO\": \"CS79/80-0000800\",\n        \"RNUM\": \"1\"\n    },\n    \"collectedTestData\": [\n        {\n            \"PATIENTID\": \"79000252\",\n            \"PATIENTTESTID\": \"5577\",\n            \"TESTNAME\": \"DLC\",\n            \"TESTNAMEID\": \"125\",\n            \"SAMPLENO\": \"2079-N597\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Collect sample",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzI1NjczODAsImV4cCI6MTY3MjU3MDk4MH0.oiYuCvISDUn7kbg0m_Up9O9f2iw3-Jv9kDMUE8i7RBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientTestId[]",
+							"value": "5578",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "79000252",
+							"type": "text"
+						},
+						{
+							"key": "testNameId[]",
+							"value": "125",
+							"type": "text"
+						},
+						{
+							"key": "billNo",
+							"value": "CS79/80-0000800",
+							"type": "text"
+						},
+						{
+							"key": "ageAndGender",
+							"value": "30 Y / MALE",
+							"type": "text"
+						},
+						{
+							"key": "isStat",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "visitId",
+							"value": "3246",
+							"type": "text"
+						},
+						{
+							"key": "inPatientId",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/collectSample",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"collectSample"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Collect sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientTestId[]",
+									"value": "5577",
+									"type": "text"
+								},
+								{
+									"key": "patientId",
+									"value": "79000252",
+									"type": "text"
+								},
+								{
+									"key": "testNameId[]",
+									"value": "125",
+									"type": "text"
+								},
+								{
+									"key": "billNo",
+									"value": "CS79/80-0000800",
+									"type": "text"
+								},
+								{
+									"key": "ageAndGender",
+									"value": "30 Y / MALE",
+									"type": "text"
+								},
+								{
+									"key": "isStat",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "visitId",
+									"value": "3246",
+									"type": "text"
+								},
+								{
+									"key": "inPatientId",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/lab/collectSample",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"lab",
+								"collectSample"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1672567750.882567"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1672567750.882567"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jan 2023 10:09:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"labno\": \"\",\n    \"collectionno\": \"\",\n    \"status\": \"alreadycollected\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Undo sample collection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "billNo",
+							"value": "CS/78/79",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "78900014",
+							"type": "text"
+						},
+						{
+							"key": "patientTestId[]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "patientTestId[]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "patientTestId[]",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/undoSampleCollection",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"undoSampleCollection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lab receive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzI3MzYyMTgsImV4cCI6MTY3MjczOTgxOH0.-fT6hTZaj8eS09fbwcJ1Wp25TbWqzCZ5tWkGHr1HccI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sampleNo",
+							"value": "2079-N580",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "79000252",
+							"type": "text"
+						},
+						{
+							"key": "patientTestId[]",
+							"value": "5577",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/labReceiveTest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"labReceiveTest"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lab receive",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "billNo",
+									"value": "CS79/80-0000800",
+									"type": "text"
+								},
+								{
+									"key": "patientId",
+									"value": "79000252",
+									"type": "text"
+								},
+								{
+									"key": "patientTestId[]",
+									"value": "5577",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.midasehealth.com/lab/labReceiveTest",
+							"protocol": "https",
+							"host": [
+								"api",
+								"midasehealth",
+								"com"
+							],
+							"path": [
+								"lab",
+								"labReceiveTest"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PATCH, PUT, DELETE"
+						},
+						{
+							"key": "Cache-control",
+							"value": "no-store, max-age=0, no-cache"
+						},
+						{
+							"key": "Debugbar-Time",
+							"value": "1672737386.146402"
+						},
+						{
+							"key": "Debugbar-Link",
+							"value": "http://192.168.100.105:8080/?debugbar_time=1672737386.146402"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Jan 2023 09:16:26 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Verify test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sampleNo",
+							"value": "2079-N580",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "79000252",
+							"type": "text"
+						},
+						{
+							"key": "patientTestId[]",
+							"value": "5577",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/verifyTest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"verifyTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department receive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzMzMjk1NzUsImV4cCI6MTY3MzMzMzE3NX0.WIqVNwQDAiVN3Y2H397X30qB6mif6H65qWAPJpIDtBI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientTestId[]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/departmentReceive",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"departmentReceive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorizetest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzQ0NzEzNjQsImV4cCI6MTY3NDQ3NDk2NH0.E5F0P-R_FfB8ZTrUSoB5MVW29eO5hIRPR65rQT0BIUM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientTestId[]",
+							"value": "5628",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/authorizeTest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"authorizeTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hold Report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc5OTA0ODMsImV4cCI6MTY3Nzk5NDA4M30.76dJCQIpgDPiOYothtxM8H6IcapklgZOzJEEXjDaCgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientTestId",
+							"value": "79000346",
+							"type": "text"
+						},
+						{
+							"key": "remarks",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "releaseTest",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/holdReport",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"holdReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Undo Lab Received",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/undoLabReceived?patientid=78000081&testnameid=531&billno=CS78/79-0000105&testnasamplenomeid=2078-N328",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"undoLabReceived"
+					],
+					"query": [
+						{
+							"key": "patientid",
+							"value": "78000081"
+						},
+						{
+							"key": "testnameid",
+							"value": "531"
+						},
+						{
+							"key": "billno",
+							"value": "CS78/79-0000105"
+						},
+						{
+							"key": "testnasamplenomeid",
+							"value": "2078-N328"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report Hold Log",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getReportHoldLog?patientTestId=6182",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getReportHoldLog"
+					],
+					"query": [
+						{
+							"key": "patientTestId",
+							"value": "6182"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cancel test name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjc3NzM2OTQ2LCJleHAiOjE2Nzc4MDg5NDZ9.flC7aNt6L3VRfxmnuPL6EBvAEHaRU3K-pQhtWXWP2JI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "billNo",
+							"value": "CS78/79-0000105",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "78000081",
+							"type": "text"
+						},
+						{
+							"key": "patientTestIdList[]",
+							"value": "172",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getCancelTestList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getCancelTestList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjc3NzM1NTgzLCJleHAiOjE2Nzc4MDc1ODN9.V0Qj8W5RRYjqC1PEk1ATNBI2n-ZXU9txR3K38CF5y74",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chkbx_cancelTest[]",
+							"value": "172",
+							"type": "text"
+						},
+						{
+							"key": "cancelTestRemarks",
+							"value": "cancelled",
+							"type": "text"
+						},
+						{
+							"key": "billNo",
+							"value": "CS78/79-0000105",
+							"type": "text"
+						},
+						{
+							"key": "patientId",
+							"value": "78000081",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/cancelTest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"cancelTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get doctor from checkbox footer setup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjc3NzUxMDgwLCJleHAiOjE2Nzc4MjMwODB9.-43i0y9jti49SUukY8qBEu8V_O017NuLzZ1JAUIxYNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "depid",
+							"value": "1022",
+							"type": "text"
+						},
+						{
+							"key": "patienttestid",
+							"value": "6167",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getDoctorFromCheckboxFooterSetup",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getDoctorFromCheckboxFooterSetup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lab Report Footer Regulation Updated",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjc3NzU0MTE4LCJleHAiOjE2Nzc4MjYxMTh9.E_XfQtiBHV-cQpkL5uKqnVj-PvzgdNEtcmweF4LjcLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "depid",
+							"value": "1022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getLabReportFooterRegulationUpdated",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getLabReportFooterRegulationUpdated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Findings/Testresult--X--",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaGtAZ21haWwuY29tIiwiaWF0IjoxNjc4MDAwODc2LCJleHAiOjE2NzgwNzI4NzZ9.Ay2dDh7bXyBmUjszkdwO-jqJmQ6LrFFHoFBQgSpatH4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "testid[140]",
+							"value": "140",
+							"type": "text"
+						},
+						{
+							"key": "testnameid[140]",
+							"value": "531",
+							"type": "text"
+						},
+						{
+							"key": "patienttestid[140]",
+							"value": "6184",
+							"type": "text"
+						},
+						{
+							"key": "patientid[140]",
+							"value": "79000393",
+							"type": "text"
+						},
+						{
+							"key": "unit[140]",
+							"value": "Gm%",
+							"type": "text"
+						},
+						{
+							"key": "refrange[140]",
+							"value": "10 - 16",
+							"type": "text"
+						},
+						{
+							"key": "finding[140]",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/savefindings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"savefindings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Findings-",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzgyNjQ1NjgsImV4cCI6MTY3ODI2ODE2OH0.Y0445lyK8E3tybWbu6Emy3JSmLfKEJP5Xa6NhEouE4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patientestids",
+							"value": "6045-79000351-177,",
+							"type": "text"
+						},
+						{
+							"key": "ageGender",
+							"value": "21 Y M",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getFindings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getFindings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJpd2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2NzgyNzIyOTksImV4cCI6MTY3ODI3NTg5OX0.TwbD9tM-VX3Y1HHjRSQn9n_ymDJbBKlUnutqT7tL628",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "DEPT_DEPTYPE",
+							"value": "P",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.midasehealth.com/lab/getDepartment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"midasehealth",
+						"com"
+					],
+					"path": [
+						"lab",
+						"getDepartment"
+					],
+					"query": [
+						{
+							"key": "DEPT_DEPID",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Testname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "TENA_DEPID",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.100.105:8080/newdevapi/lab/getTestname",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"100",
+						"105"
+					],
+					"port": "8080",
+					"path": [
+						"newdevapi",
+						"lab",
+						"getTestname"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
